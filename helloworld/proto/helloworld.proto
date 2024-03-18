@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package helloworld;
+
+option go_package="grpc/helloworld/proto";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/any.proto";
+
+service Greeter{
+  //一元调用
+  rpc SayHello(HelloRequest) returns(HelloResponse){}
+  //客户端流
+  rpc SayHelloClientStream(stream HelloRequest) returns(HelloResponse){}
+//  rpc SayHelloClientStream(HelloRequest) returns(HelloResponse){}
+  //服务端流
+  rpc SayHelloServerStream(HelloRequest) returns(stream HelloResponse){}
+  //双向流
+  rpc SayHelloTwoWayStream(stream HelloRequest) returns(stream HelloResponse){}
+}
+
+//begin from 0
+enum Gender{
+  FEMALE=0;
+  MALE=1;
+}
+
+//size:[1-15]---one byte
+message HelloRequest{
+  string name=1;
+  Gender gender=2;
+  uint32 age=3;
+  google.protobuf.Timestamp birthday=4;
+  Address addr=7;
+
+  repeated string hobys=8;
+  map<string,google.protobuf.Any> data=9;
+
+  //保留index或者字段名
+  //reserved 5,6,18 to 50;
+}
+
+message Address{
+  string province=1;
+  string city=2;
+}
+
+message HelloResponse{
+  string msg=1;
+
+}

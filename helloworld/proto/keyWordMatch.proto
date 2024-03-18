@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package keyword;
+
+option go_package="grpc/keyword/proto";
+
+message MatchRequest{
+  string input=1;
+}
+
+message MatchResponse{
+  bool ok=1;
+  string word=2;
+}
+
+service KeyWordFilter{
+  rpc Match(MatchRequest) returns (MatchResponse);
+}

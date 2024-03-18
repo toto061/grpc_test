@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package sensitive;
+
+option go_package="grpc/sensitive/proto";
+
+message ValidateRequest{
+  string input=1;
+}
+
+message ValidateResponse{
+  bool ok=1;
+  string word=2;
+}
+
+service SensitiveFilter{
+  rpc Validate(ValidateRequest) returns (ValidateResponse);
+}
