@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package keyword;
 
-option go_package="grpc/keyword/proto";
+option go_package="grpc_test/keyword/proto";
 
 message MatchRequest{
   string input=1;

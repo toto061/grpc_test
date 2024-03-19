@@ -7,7 +7,7 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
-	"grpc/helloworld/proto"
+	"grpc_test/helloworld/proto"
 	"io"
 	"log"
 	"net"

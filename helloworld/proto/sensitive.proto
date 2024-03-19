@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package sensitive;
 
-option go_package="grpc/sensitive/proto";
+option go_package="grpc_test/sensitive/proto";
 
 message ValidateRequest{
   string input=1;

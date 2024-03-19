@@ -3,7 +3,7 @@ package sensitiveServer
 import (
 	"context"
 	"fmt"
-	"grpc/helloworld/proto"
+	"grpc_test/helloworld/proto"
 )
 
 type SensitiveServer struct {

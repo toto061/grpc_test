@@ -3,7 +3,7 @@ package keywordServer
 import (
 	"context"
 	"fmt"
-	"grpc/helloworld/proto"
+	"grpc_test/helloworld/proto"
 )
 
 type KeywordServer struct {

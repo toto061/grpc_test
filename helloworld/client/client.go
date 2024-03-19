@@ -8,7 +8,7 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/protobuf/types/known/anypb"
 	"google.golang.org/protobuf/types/known/timestamppb"
-	"grpc/helloworld/proto"
+	"grpc_test/helloworld/proto"
 	"io"
 	"log"
 	"time"

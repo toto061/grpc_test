@@ -4,8 +4,8 @@ import (
 	"flag"
 	"fmt"
 	"google.golang.org/grpc"
-	keywordServer "grpc/helloworld/keyword/server"
-	"grpc/helloworld/proto"
+	keywordServer "grpc_test/helloworld/keyword/server"
+	"grpc_test/helloworld/proto"
 	"log"
 	"net"
 )
